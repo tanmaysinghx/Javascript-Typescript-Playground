@@ -1,0 +1,37 @@
+------------------------------------------------------Initialize a repo -----------------------------------------------
+
+npm init -y
+
+npm install typescript ts-node
+
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
+
+
+"scripts": {
+  "start": "ts-node src/index.ts"
+}
+
+npm run start
+
+
+
+---------------------------------------------------------Add Nodemon:-------------------------------------------------
+
+npm install nodemon --save-dev
+
+"scripts": {
+  "start": "ts-node src/index.ts",   // For regular start
+  "dev": "nodemon --exec ts-node src/index.ts" // For development
+}
